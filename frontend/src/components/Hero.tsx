@@ -4,10 +4,12 @@ import scribble from "../assets/img/scribble.png";
 import rectangle from "../assets/img/rectangle.png";
 import star from "../assets/img/star.png";
 import grad from "../assets/img/bg_grad.png";
+import logo from "../assets/img/paper strings icon.png";
 
 export default function Hero() {
     return (
         <div className="w-screen h-screen flex flex-col overflow-hidden items-center justify-center">
+            <img src={logo} className="w-72" alt="" />
             <h1 className="text-8xl font-stretch-expanded mb-6 font-bold">
                 Paper Strings
             </h1>

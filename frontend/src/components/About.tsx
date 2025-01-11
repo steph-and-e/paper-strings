@@ -5,7 +5,7 @@ import teach from "../assets/img/teach.png";
 
 export default function About() {
     return (
-        <div className="w-[95%] p-12 flex flex-col gap-4 items-center mx-auto bg-white rounded-3xl shadow-lg shadow-black/50">
+        <div className="w-[95%] p-12 flex flex-col gap-4 items-center mx-auto bg-white rounded-3xl shadow-lg">
             <h1 className="text-4xl w-full max-w-192 font-bold flex flex-col mb-4 items-center">
                 <span className=" self-start -mb-2">
                     Make learning the guitar{" "}
