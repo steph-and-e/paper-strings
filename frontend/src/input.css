@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-light-red: #ffc5ab;
@@ -30,5 +30,5 @@
 }
 
 body {
-    width: 100vw;
+  width: 100vw;
 }
