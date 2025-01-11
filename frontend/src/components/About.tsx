@@ -1,20 +1,20 @@
 export default function About() {
   return (
-    <div className="w-[95%] p-12 flex flex-col gap-8 items-center mx-auto h-screen bg-white rounded-3xl shadow-lg shadow-black/50">
+    <div className="w-[95%] p-12 flex flex-col gap-4 items-center mx-auto h-screen bg-white rounded-3xl shadow-lg shadow-black/50">
       <h1 className="text-4xl w-full max-w-192 font-bold flex flex-col mb-4 items-center">
         <span className=" self-start -mb-2">Make learning the guitar </span>
         <span className="self-end text-7xl">that much easier!</span>
       </h1>
-      <p className="flex flex-col text-center">
-        We've all been there. We want to learn how to play a new instrument! We
-        want to learn how to play our favourite songs!{" "}
-        <span className="text-2xl font-bold">
-          Unfortunately, many worries plague us before we even begin:
-        </span>
-      </p>
-      {/* little word cloud graphic of worries and whatnot, little emoji icons too */}
-      <div className="h-48 w-full bg-slate-400/50"></div>
-      <p></p>
+      <div className="w-full mb-8 bg-slate-500/50 h-128 flex flex-row gap-4">
+        {/* component for money saving */}
+        {/* component for beginner-friendly */}
+        {/* component for educator-friendly */}
+      </div>
+      <p>Interested? Let's get started!</p>
+      <div className="flex flex-row gap-4">
+        <button>For learners</button>
+        <button>For educators</button>
+      </div>
     </div>
   );
 }

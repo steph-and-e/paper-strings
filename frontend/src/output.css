@@ -541,6 +541,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .-mb-2 {
     margin-bottom: calc(var(--spacing) * -2);
   }
@@ -553,23 +556,17 @@
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
-  .mb-16 {
-    margin-bottom: calc(var(--spacing) * 16);
-  }
-  .mb-64 {
-    margin-bottom: calc(var(--spacing) * 64);
-  }
   .flex {
     display: flex;
+  }
+  .hidden {
+    display: none;
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-48 {
-    height: calc(var(--spacing) * 48);
-  }
-  .h-64 {
-    height: calc(var(--spacing) * 64);
+  .h-128 {
+    height: calc(var(--spacing) * 128);
   }
   .h-screen {
     height: 100vh;
@@ -601,12 +598,6 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -625,29 +616,20 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
-  }
-  .bg-slate-400 {
-    background-color: var(--color-slate-400);
-  }
-  .bg-slate-400\/50 {
-    background-color: color-mix(in oklab, var(--color-slate-400) 50%, transparent);
-  }
-  .bg-slate-700 {
-    background-color: var(--color-slate-700);
+  .bg-slate-500\/50 {
+    background-color: color-mix(in oklab, var(--color-slate-500) 50%, transparent);
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
   .p-12 {
     padding: calc(var(--spacing) * 12);
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
-  }
-  .text-center {
-    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -698,8 +680,16 @@ h2 {
   color: slategrey;
 }
 p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.5rem;
+}
+button {
+  background-color: var(--color-purple);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 @supports (-moz-orient: inline) {
   @layer base {
