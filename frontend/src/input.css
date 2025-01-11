@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-light-red: #ffc5ab;
-  --color-light-blue: #9ce4dc;
-  --color-dark-blue: #01314d;
-  --color-red: #f95a5a;
-  --color-yellow: #ffc53d;
-  --color-green: #afd157;
-  --color-blue: #35cee1;
-  --color-purple: #9a63ff;
+    --color-light-red: #ffc5ab;
+    --color-light-blue: #9ce4dc;
+    --color-dark-blue: #01314d;
+    --color-red: #f95a5a;
+    --color-yellow: #ffc53d;
+    --color-green: #afd157;
+    --color-blue: #35cee1;
+    --color-purple: #9a63ff;
 }
 
 /*
@@ -20,37 +20,47 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
 }
 
 body {
-  width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 h1 {
-  font-stretch: expanded;
+    font-stretch: expanded;
 }
 
 h2 {
-  color: slategrey;
+    color: slategrey;
 }
 
 p {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 button {
-  background-color: var(--color-purple);
-  color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+    background-color: var(--color-purple);
+    box-shadow: inset 0px -2px 20px rgba(80, 20, 150, 50%),
+        0px 10px 15px rgba(155, 90, 255, 50%);
+    transition: all 0.25s ease-in-out;
+    filter: brightness(100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+button:hover {
+    filter: brightness(125%);
 }

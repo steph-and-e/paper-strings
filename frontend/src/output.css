@@ -529,11 +529,113 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
   }
+  .-top-0 {
+    top: calc(var(--spacing) * -0);
+  }
+  .-top-8 {
+    top: calc(var(--spacing) * -8);
+  }
+  .-top-16 {
+    top: calc(var(--spacing) * -16);
+  }
+  .-top-24 {
+    top: calc(var(--spacing) * -24);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
+  }
+  .top-24 {
+    top: calc(var(--spacing) * 24);
+  }
+  .-right-8 {
+    right: calc(var(--spacing) * -8);
+  }
+  .-right-12 {
+    right: calc(var(--spacing) * -12);
+  }
+  .-right-24 {
+    right: calc(var(--spacing) * -24);
+  }
+  .-right-25 {
+    right: calc(var(--spacing) * -25);
+  }
+  .-right-48 {
+    right: calc(var(--spacing) * -48);
+  }
+  .-right-72 {
+    right: calc(var(--spacing) * -72);
+  }
+  .-right-96 {
+    right: calc(var(--spacing) * -96);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .-bottom-24 {
+    bottom: calc(var(--spacing) * -24);
+  }
+  .-bottom-36 {
+    bottom: calc(var(--spacing) * -36);
+  }
+  .-bottom-48 {
+    bottom: calc(var(--spacing) * -48);
+  }
+  .-bottom-96 {
+    bottom: calc(var(--spacing) * -96);
+  }
+  .-bottom-100 {
+    bottom: calc(var(--spacing) * -100);
+  }
+  .-bottom-128 {
+    bottom: calc(var(--spacing) * -128);
+  }
+  .-bottom-144 {
+    bottom: calc(var(--spacing) * -144);
+  }
+  .-bottom-208 {
+    bottom: calc(var(--spacing) * -208);
+  }
+  .-bottom-256 {
+    bottom: calc(var(--spacing) * -256);
+  }
+  .-left-1 {
+    left: calc(var(--spacing) * -1);
+  }
+  .-left-2 {
+    left: calc(var(--spacing) * -2);
+  }
+  .-left-4 {
+    left: calc(var(--spacing) * -4);
+  }
+  .-left-6 {
+    left: calc(var(--spacing) * -6);
+  }
+  .-left-12 {
+    left: calc(var(--spacing) * -12);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .-z-40 {
+    z-index: calc(40 * -1);
+  }
+  .-z-50 {
+    z-index: calc(50 * -1);
+  }
+  .-z-60 {
+    z-index: calc(60 * -1);
+  }
+  .-z-99 {
+    z-index: calc(99 * -1);
+  }
+  .z-999 {
+    z-index: 999;
   }
   .m-\[1\.25\%\] {
     margin: 1.25%;
@@ -556,11 +658,17 @@
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
+  }
   .flex {
     display: flex;
   }
   .hidden {
     display: none;
+  }
+  .aspect-auto {
+    aspect-ratio: auto;
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
@@ -570,6 +678,24 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .max-h-48 {
+    max-height: calc(var(--spacing) * 48);
+  }
+  .w-84 {
+    width: calc(var(--spacing) * 84);
+  }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
+  }
+  .w-108 {
+    width: calc(var(--spacing) * 108);
+  }
+  .w-110 {
+    width: calc(var(--spacing) * 110);
+  }
+  .w-120 {
+    width: calc(var(--spacing) * 120);
   }
   .w-\[95\%\] {
     width: 95%;
@@ -604,20 +730,26 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
   .self-end {
     align-self: flex-end;
   }
   .self-start {
     align-self: flex-start;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
-  }
-  .bg-slate-500\/50 {
-    background-color: color-mix(in oklab, var(--color-slate-500) 50%, transparent);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -630,6 +762,9 @@
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -672,6 +807,7 @@
 }
 body {
   width: 100vw;
+  overflow-x: hidden;
 }
 h1 {
   font-stretch: expanded;
@@ -685,11 +821,18 @@ p {
 }
 button {
   background-color: var(--color-purple);
+  box-shadow: inset 0px -2px 20px rgba(80, 20, 150, 50%), 0px 10px 15px rgba(155, 90, 255, 50%);
+  transition: all 0.25s ease-in-out;
+  filter: brightness(100%);
   color: white;
   padding: 1rem;
   border-radius: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
+  pointer-events: all;
+}
+button:hover {
+  filter: brightness(125%);
 }
 @supports (-moz-orient: inline) {
   @layer base {
