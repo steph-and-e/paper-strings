@@ -538,8 +538,26 @@
   .m-\[1\.25\%\] {
     margin: 1.25%;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .-mb-2 {
+    margin-bottom: calc(var(--spacing) * -2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
+  }
+  .mb-64 {
+    margin-bottom: calc(var(--spacing) * 64);
   }
   .flex {
     display: flex;
@@ -547,14 +565,29 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-48 {
+    height: calc(var(--spacing) * 48);
+  }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
   .h-screen {
     height: 100vh;
+  }
+  .w-\[95\%\] {
+    width: 95%;
   }
   .w-\[97\.5\%\] {
     width: 97.5%;
   }
+  .w-full {
+    width: 100%;
+  }
   .w-screen {
     width: 100vw;
+  }
+  .max-w-192 {
+    max-width: calc(var(--spacing) * 192);
   }
   .flex-col {
     flex-direction: column;
@@ -568,21 +601,65 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
+  }
+  .self-end {
+    align-self: flex-end;
+  }
+  .self-start {
+    align-self: flex-start;
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
+  .bg-slate-400 {
+    background-color: var(--color-slate-400);
+  }
+  .bg-slate-400\/50 {
+    background-color: color-mix(in oklab, var(--color-slate-400) 50%, transparent);
+  }
+  .bg-slate-700 {
+    background-color: var(--color-slate-700);
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .text-center {
+    text-align: center;
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-7xl {
+    font-size: var(--text-7xl);
+    line-height: var(--tw-leading, var(--text-7xl--line-height));
   }
   .text-8xl {
     font-size: var(--text-8xl);
@@ -592,8 +669,8 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-stretch-ultra-expanded {
-    font-stretch: ultra-expanded;
+  .font-stretch-expanded {
+    font-stretch: expanded;
   }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -601,6 +678,9 @@
   }
   .shadow-black\/25 {
     --tw-shadow-color: color-mix(in oklab, var(--color-black) 25%, transparent);
+  }
+  .shadow-black\/50 {
+    --tw-shadow-color: color-mix(in oklab, var(--color-black) 50%, transparent);
   }
 }
 @layer base {
@@ -610,6 +690,16 @@
 }
 body {
   width: 100vw;
+}
+h1 {
+  font-stretch: expanded;
+}
+h2 {
+  color: slategrey;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 @supports (-moz-orient: inline) {
   @layer base {

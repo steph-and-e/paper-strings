@@ -32,3 +32,16 @@
 body {
   width: 100vw;
 }
+
+h1 {
+  font-stretch: expanded;
+}
+
+h2 {
+  color: slategrey;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
