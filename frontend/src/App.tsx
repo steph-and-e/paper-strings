@@ -1,17 +1,21 @@
-import About from "./components/About";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Technology from "./components/Technology";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import Root from "./pages/Root";
+import Educators from "./pages/Educators";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root />,
+        children: [
+            { index: true, element: <Home /> },
+            { path: "/educators", element: <Educators /> },
+        ],
+    },
+]);
 
 function App() {
-    return (
-        <div className="w-screen">
-            <Navbar />
-            <Hero />
-            <About />
-            <Technology />
-        </div>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
