@@ -37,7 +37,7 @@ export default function Hero() {
             />
             <img
                 src={grad}
-                className="absolute w-full left-0 -z-40 -bottom-208"
+                className="absolute w-full left-0 -z-40 -bottom-[90%]"
             />
             {/* little ideas for the graphics
             - v music bars in background
