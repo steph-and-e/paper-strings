@@ -15,6 +15,8 @@ export default function Educators() {
     const [currentPage, setCurrentPage] = useState(0);
     const [pages, setPages] = useState([0]);
 
+    console.log(tooltips);
+
     return (
         <div
             className="w-screen h-screen flex justify-center bg-purple"
@@ -28,16 +30,30 @@ export default function Educators() {
                 }
             }}
         >
-            <h1 className="absolute top-48 text-9xl">{currentPage}</h1>
-            {tooltips.map(
-                (tt) =>
-                    tt.page === currentPage && (
-                        <Tooltip
-                            top={tt.top}
-                            left={tt.left}
-                            content={tt.content}
-                        />
-                    )
+            {tooltips.filter((tt) => tt.page === currentPage).length > 0 ? (
+                tooltips.map((tt) => {
+                    console.log("ya");
+                    return (
+                        tt.page === currentPage && (
+                            <Tooltip
+                                top={tt.top}
+                                left={tt.left}
+                                content={tt.content}
+                            />
+                        )
+                    );
+                })
+            ) : (
+                <div className="flex flex-col gap-4 items-center justify-center text-white">
+                    <h1 className="text-7xl font-bold">
+                        Click anywhere to add an annotation!
+                    </h1>
+                    <h3 className="text-white/50">
+                        Use the arrows on the left and right to navigate pages,
+                        and use the + and - icons at the bottom to add or remove
+                        pages!
+                    </h3>
+                </div>
             )}
 
             <div className="flex flex-row gap-4 absolute bottom-4 items-center">

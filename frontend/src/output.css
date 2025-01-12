@@ -964,6 +964,12 @@
   .text-white {
     color: var(--color-white);
   }
+  .text-white\/50 {
+    color: color-mix(in oklab, var(--color-white) 50%, transparent);
+  }
+  .text-white\/80 {
+    color: color-mix(in oklab, var(--color-white) 80%, transparent);
+  }
   .lowercase {
     text-transform: lowercase;
   }
